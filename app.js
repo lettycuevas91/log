@@ -15,8 +15,8 @@ app.post("/login", async (req, res, next) => {
     try {
       const user = await User.authenticate(req.body.email, req.body.password);
       if (user) {
-        req.session.userId = user._id;
-        return res.redirect("/");
+        req.userId = user._id;
+        return res.redirect("/index");
       }else {
         res.redirect("/login")
       }
