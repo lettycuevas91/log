@@ -9,9 +9,9 @@ app.set('views', 'views')
 app.use(express.urlencoded())
 
 // routes
-app.get('/', getAll)
+//app.get('/', getAll)
 app.get('/login', async (req, res) => res.render('login'))
-app.post("/login", async (req, res, next) => {
+app.post('/login', async (req, res, next) => {
     try {
       const user = await User.authenticate(req.body.email, req.body.password);
       if (user) {
