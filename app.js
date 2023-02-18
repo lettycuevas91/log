@@ -13,4 +13,10 @@ app.get('/', getAll)
 app.get('/register', async (req, res) => res.render('register'))
 app.post('/register', create)
 
+app.get('/logout', async (req, res) => res.render('register'))
+
+
+
+
 app.listen(3000, () => console.log('Listening on port 3000!'))
+
