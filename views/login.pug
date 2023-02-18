@@ -4,13 +4,11 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Register Form
+        title Acceso
     body 
-        form(action="/register", method="post")
-            label(for="name") Nombre 
-            input(type="text", name="name" id="name") 
+        form(action="/login", method="post")
             label(for="email") Email 
             input(type="email", name="email" id="email") 
             label(for="password") Contraseña 
             input(type="password", name="password" id="password") 
-            button(type="submit") Registrarse
+            button(type="submit") Login
